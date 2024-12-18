@@ -1,0 +1,56 @@
+#site-wrapper {
+    width: 80%;
+    padding: 0 0 0 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.chapter-wrapper {
+    padding: 10px 15px;
+}
+
+.chapter-wrapper:nth-child(even) {
+    background-color: #DDD;
+}
+
+.chapter-index {
+    font-weight: bold;
+    padding-right: 15px;
+}
+
+.chapter-title {
+    font-style: italic;
+}
+
+.chapter-header {
+    width: 100%;
+
+    padding-bottom: 5px;
+}
+
+.links-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+
+.links-wrapper a {
+    font-weight: bold;
+    padding-right: 15px;
+}
+
+#comic-page-wrapper  {
+    display: flex;
+    justify-content: center;
+
+}
+
+#comic-nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+#comic-nav-wrapper img {
+    height: 60px;
+}
