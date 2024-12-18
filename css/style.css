@@ -46,6 +46,10 @@
 
 }
 
+#comic-page-wrapper  {
+    width: 100%;
+}
+
 #comic-nav-wrapper {
     display: flex;
     justify-content: space-between;
