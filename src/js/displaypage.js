@@ -1,3 +1,5 @@
+import {tableData} from "./tableData";
+
 const paramsString = window.location.search;
 const searchParams = new URLSearchParams(paramsString);
 const currentChapterID = searchParams.get("ch");
