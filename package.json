@@ -1,0 +1,23 @@
+{
+  "name": "super-monster-quest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx @tailwindcss/cli -i tailwind-config.css -o .src/css/tailwind-min.css",
+    "build --watch": "npx @tailwindcss/cli -i tailwind-config.css -o .src/css/tailwind-min.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "eslint": "^9.19.0",
+    "globals": "^15.14.0",
+    "tailwindcss": "^4.0.3"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.3"
+  }
+}
