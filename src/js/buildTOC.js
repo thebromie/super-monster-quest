@@ -1,3 +1,5 @@
+import { tableData } from "./tableData";
+
 function addChapterRow(id, item) {
   
   let tocWrapper = document.getElementById("TOC-Wrapper");
@@ -21,7 +23,7 @@ function addChapterRow(id, item) {
   chTitle.setAttribute("class", "chapter-title");
   chTitle.innerHTML = item.chTitle;
 
-  for (i = 1; i <= item.pageTotal; i++) {
+  for (let i = 1; i <= item.pageTotal; i++) {
     let newLink = document.createElement("a"); 
     let paddedIndex = i.toString().padStart(3, '0')
     newLink.setAttribute("href", "pageview.html?ch=" + id + "&pg=" + paddedIndex);
@@ -29,17 +31,12 @@ function addChapterRow(id, item) {
     linksWrapper.appendChild(newLink);
   }
 
-
-
   chHeader.appendChild(chIndex);
   chHeader.appendChild(chTitle);
   newChapter.appendChild(chHeader);
   newChapter.appendChild(linksWrapper);
 
   tocWrapper.appendChild(newChapter);
-
-  
-  
 }
 
 function setupTableOfContents(){

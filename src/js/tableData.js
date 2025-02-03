@@ -1,4 +1,4 @@
-let tableData = {
+export const tableData = {
   CH1:{
     chIndex: 1,
     pageTotal: 15,
