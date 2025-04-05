@@ -1,4 +1,4 @@
-import { tableData } from "./tableData";
+import { tableData } from "./tableData.js";
 
 function addChapterRow(id, item) {
   
