@@ -23,5 +23,5 @@ export const tableData = {
     chIndex: 5,
     pageTotal: 48,
     chTitle: "Friday"
-  },
+  }
 };
