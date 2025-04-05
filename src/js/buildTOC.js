@@ -22,7 +22,7 @@ function addChapterRow(chapter) {
     chTitle.setAttribute("class", "chapter-title");
     chTitle.innerHTML = chapter.chTitle;
 
-    for (let i = chapter.pageStart || 1; i <= (chapter.pageTotal + (chapter.pageStart || 0)); i++) {
+    for (let i = 1; i <= chapter.pageTotal; i++) {
         const newLink = document.createElement("a");
         const paddedIndex = i.toString().padStart(3, '0')
         newLink.setAttribute("href", `pageview.html?ch=CH${chapter.chIndex}&pg=${paddedIndex}`);
