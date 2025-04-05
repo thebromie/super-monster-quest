@@ -1,4 +1,4 @@
-import { tableData } from "./tableData.js";
+import { chapterData } from "./chapterData.js";
 
 function addChapterRow(id, item) {
   
@@ -40,8 +40,8 @@ function addChapterRow(id, item) {
 }
 
 function setupTableOfContents(){
-  for (const key in tableData) {
-    addChapterRow(key, tableData[key]);
+  for (const key in chapterData) {
+    addChapterRow(key, chapterData[key]);
     // console.log(key + ": " + Object.keys(tableData).indexOf(key))
   }
 }

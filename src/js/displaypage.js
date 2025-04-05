@@ -1,4 +1,4 @@
-import { tableData } from "./tableData.js";
+import { chapterData } from "./chapterData.js";
 
 const paramsString = window.location.search;
 const searchParams = new URLSearchParams(paramsString);
@@ -6,23 +6,23 @@ const currentChapterID = searchParams.get("ch");
 const currentPagePadded = searchParams.get("pg");
 const currentPageNumber = parseInt(currentPagePadded);
 
-if (!tableData[currentChapterID]) {
+if (!chapterData[currentChapterID]) {
     console.error(`Invalid chapter ID: ${currentChapterID}`);
     // Optionally redirect to a default page or show an error message
     // window.location.href = "error.html"; // Example redirect
 }
 
 // Ensure currentPageNumber is within valid range
-if (currentPageNumber < 1 || currentPageNumber > tableData[currentChapterID].pageTotal) {
+if (currentPageNumber < 1 || currentPageNumber > chapterData[currentChapterID].pageTotal) {
     console.error(`Invalid page number: ${currentPageNumber}`);
     // Optionally redirect to a default page or show an error message
     // window.location.href = "error.html"; // Example redirect
 }
 
-const firstChapterID = Object.keys(tableData)[0];
-const latestChapterID = Object.keys(tableData)[Object.keys(tableData).length - 1];
+const firstChapterID = Object.keys(chapterData)[0];
+const latestChapterID = Object.keys(chapterData)[Object.keys(chapterData).length - 1];
 
-const currentPageTotal = tableData[currentChapterID].pageTotal;
+const currentPageTotal = chapterData[currentChapterID].pageTotal;
 
 function setupNav() {
 
@@ -41,7 +41,7 @@ function setupPrevLink() {
     } else if (currentPageNumber == 1) {
 
         let prevChapterID = getPrevChapterID()
-        let prevChapterLastPagePadded = (tableData[prevChapterID].pageTotal).toString().padStart(3, '0');
+        let prevChapterLastPagePadded = (chapterData[prevChapterID].pageTotal).toString().padStart(3, '0');
 
         console.log("You've reached the start of the chapter")
         console.log("Prev Chapter ID: " + prevChapterID + " " + prevChapterLastPagePadded)
@@ -71,8 +71,8 @@ function setupNextLink() {
 
 function getPrevChapterID() {
     if (currentChapterID != firstChapterID) {
-        let chIndex = Object.keys(tableData).indexOf(currentChapterID)
-        return Object.keys(tableData)[chIndex - 1]
+        let chIndex = Object.keys(chapterData).indexOf(currentChapterID)
+        return Object.keys(chapterData)[chIndex - 1]
     }
 
     // what to return if current chapter is first chapter?
@@ -80,8 +80,8 @@ function getPrevChapterID() {
 
 function getNextChapterID() {
     if (currentChapterID != latestChapterID) {
-        let chIndex = Object.keys(tableData).indexOf(currentChapterID)
-        return Object.keys(tableData)[chIndex + 1]
+        let chIndex = Object.keys(chapterData).indexOf(currentChapterID)
+        return Object.keys(chapterData)[chIndex + 1]
     }
 
     // what to return if current chapter is latest chapter?
