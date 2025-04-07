@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx tailwindcss -i tailwind-config.css -o src/css/tailwind-min.css",
-    "build --watch": "npx tailwindcss -i tailwind-config.css -o src/css/tailwind-min.css --watch",
+    "build": "npx @tailwindcss/cli -i tailwind-config.css -o src/css/tailwind-min.css",
+    "build --watch": "npx @tailwindcss/cli -i tailwind-config.css -o src/css/tailwind-min.css --watch",
     "https-server": "sudo http-server -p 8080 --ssl --cert ~/.localhost-ssl/localhost.crt --key ~/.localhost-ssl/localhost.key"
   },
   "keywords": [],
@@ -19,6 +19,6 @@
     "tailwindcss": "^4.1.3"
   },
   "dependencies": {
-    "@tailwindcss/cli": "^4.0.3"
+    "@tailwindcss/cli": "^4.1.3"
   }
 }
