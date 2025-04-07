@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx @tailwindcss/cli -i tailwind-config.css -o src/css/tailwind-min.css",
     "build --watch": "npx @tailwindcss/cli -i tailwind-config.css -o src/css/tailwind-min.css --watch",
-    "https-server": "sudo http-server -p 8080 --ssl --cert ~/.localhost-ssl/localhost.crt --key ~/.localhost-ssl/localhost.key"
+    "https-server": "sudo http-server src -p 8080 --ssl --cert ~/.localhost-ssl/localhost.crt --key ~/.localhost-ssl/localhost.key"
   },
   "keywords": [],
   "author": "",
