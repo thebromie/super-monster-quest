@@ -1,25 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <link href="../css/tailwind-min.css" rel="stylesheet">
-    <title>Comic Viewer</title>
+  <meta charset="UTF-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="../css/tailwind-min.css" rel="stylesheet">
+  <title>Comic Viewer</title>
 </head>
 
 <body>
-<div class="flex w-full justify-between items-center p-2" id="nav">
-    <a id="back-nav"><img alt="Navigate to the Previous Page" class="h-8" src="../img/back.png"/></a>
-    <a id="next-nav"><img alt="Navigate to the Next Page" class="h-8" src="../img/next.png"/></a>
-</div>
-<img id="comic-page-img" src="https://www.supermonsterquest.com/pages/CH1_003.jpg"/>
-<div class="flex w-full justify-between p-2 items-center" id="footer">
-    <a id="first-nav"><img alt="Navigate to the First Page" class="h-8" src="../img/first.png"/></a>
-    <a href="../chapters" id="index-nav"><img alt="Navigate to the Chapter Indexes" class="h-8" src="../img/index.png"/></a>
-    <a id="latest-nav"><img alt="Navigate to the Latest Page" class="h-8" src="../img/latest.png"/></a>
-</div>
-<!--    <script src="../js/tableData.js" type="module"></script>-->
-<!--    <script src="../js/displaypage.js" type="module"></script>-->
-</body>
+<div class="flex flex-col lg:flex-row w-full">
+  <!-- Mobile top nav -->
+  <div class="flex w-full justify-between items-center p-2 md:hidden">
+    <a id="back-nav-mobile"><img alt="Navigate to the Previous Page" class="h-8" src="../img/back.png"/></a>
+    <a id="next-nav-mobile"><img alt="Navigate to the Next Page" class="h-8" src="../img/next.png"/></a>
+  </div>
+  <!-- Tablet nav -->
+  <div class="hidden md:flex lg:hidden w-full justify-between items-center p-2">
+    <a id="first-nav-tablet"><img alt="Navigate to the First Page" class="h-8" src="../img/first.png"/></a>
+    <a id="back-nav-tablet"><img alt="Navigate to the Previous Page" class="h-8" src="../img/back.png"/></a>
+    <a href="../chapters" id="index-nav-tablet"><img alt="Navigate to the Chapter Indexes" class="h-8"
+                                                     src="../img/index.png"/></a>
+    <a id="next-nav-tablet"><img alt="Navigate to the Next Page" class="h-8" src="../img/next.png"/></a>
+    <a id="latest-nav-tablet"><img alt="Navigate to the Latest Page" class="h-8" src="../img/latest.png"/></a>
+  </div>
+  <!-- Desktop sidebar nav -->
+  <div class="hidden lg:flex flex-col w-auto justify-between p-2">
+    <div class="flex flex-row items-center justify-between">
+      <a class="mb-2" id="back-nav-desktop"><img alt="Navigate to the Previous Page" class="h-8" src="../img/back.png"/></a>
+      <a id="next-nav-desktop"><img alt="Navigate to the Next Page" class="h-8" src="../img/next.png"/></a>
+    </div>
+    <div class="flex flex-row items-center justify-between gap-2">
+      <a id="first-nav-desktop"><img alt="Navigate to the First Page" class="h-8" src="../img/first.png"/></a>
+      <a href="../chapters" id="index-nav-desktop"><img alt="Navigate to the Chapter Indexes" class="h-8"
+                                                        src="../img/index.png"/></a>
+      <a id="latest-nav-desktop"><img alt="Navigate to the Latest Page" class="h-8" src="../img/latest.png"/></a>
+    </div>
+  </div>
 
+  <img class="w-full h-auto" id="comic-page-img" src="https://www.supermonsterquest.com/pages/CH1_003.jpg"/>
+
+  <!-- Mobile footer nav -->
+  <div class="flex md:hidden w-full justify-between p-2 items-center">
+    <a id="first-nav-mobile"><img alt="Navigate to the First Page" class="h-8" src="../img/first.png"/></a>
+    <a href="../chapters" id="index-nav-mobile"><img alt="Navigate to the Chapter Indexes" class="h-8"
+                                                     src="../img/index.png"/></a>
+    <a id="latest-nav-mobile"><img alt="Navigate to the Latest Page" class="h-8" src="../img/latest.png"/></a>
+  </div>
+</div>
+</body>
 </html>
