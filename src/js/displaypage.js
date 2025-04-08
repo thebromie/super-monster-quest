@@ -1,10 +1,12 @@
-import { tableData } from "./tableData.js";
+import {tableData} from "./tableData.js";
 
 const paramsString = window.location.search;
 const searchParams = new URLSearchParams(paramsString);
 const currentChapterID = searchParams.get("ch");
 const currentPagePadded = searchParams.get("pg");
 const currentPageNumber = parseInt(currentPagePadded);
+
+//TODO: INCLUDE PAGE NAVIGATION BY ARROW KEYS
 
 if (!tableData[currentChapterID]) {
     console.error(`Invalid chapter ID: ${currentChapterID}`);
@@ -46,10 +48,10 @@ function setupPrevLink() {
         console.log("You've reached the start of the chapter")
         console.log("Prev Chapter ID: " + prevChapterID + " " + prevChapterLastPagePadded)
 
-        prevLink.setAttribute("href", "pageview.html?ch=" + prevChapterID + "&pg=" + prevChapterLastPagePadded);
+        prevLink.setAttribute("href", "index.html?ch=" + prevChapterID + "&pg=" + prevChapterLastPagePadded);
 
     } else {
-        prevLink.setAttribute("href", "pageview.html?ch=" + currentChapterID + "&pg=" + prevPagePadded);
+        prevLink.setAttribute("href", "index.html?ch=" + currentChapterID + "&pg=" + prevPagePadded);
     }
 }
 
@@ -62,10 +64,10 @@ function setupNextLink() {
         // note: last page of the latest chapter
     } else if (currentPageNumber == currentPageTotal) {
         // note: end of a chapter
-        nextLink.setAttribute("href", "pageview.html?ch=" + getNextChapterID() + "&pg=" + "001");
+        nextLink.setAttribute("href", "index.html?ch=" + getNextChapterID() + "&pg=" + "001");
     } else {
         // note: set link to next page
-        nextLink.setAttribute("href", "pageview.html?ch=" + currentChapterID + "&pg=" + nextPagePadded);
+        nextLink.setAttribute("href", "index.html?ch=" + currentChapterID + "&pg=" + nextPagePadded);
     }
 }
 
