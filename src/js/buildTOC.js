@@ -1,4 +1,4 @@
-import { tableData } from "./tableData.js";
+import {tableData} from "./tableData.js";
 
 function addChapterRow(id, item) {
   
@@ -26,7 +26,7 @@ function addChapterRow(id, item) {
   for (let i = 1; i <= item.pageTotal; i++) {
     const newLink = document.createElement("a");
     const paddedIndex = i.toString().padStart(3, '0')
-    newLink.setAttribute("href", "pageview.html?ch=" + id + "&pg=" + paddedIndex);
+    newLink.setAttribute("href", "index.html?ch=" + id + "&pg=" + paddedIndex);
     newLink.innerHTML = paddedIndex
     linksWrapper.appendChild(newLink);
   }
