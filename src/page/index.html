@@ -9,19 +9,15 @@
 
 <body>
 <div class="flex flex-col lg:flex-row w-full">
-  <!-- Mobile top nav -->
-  <div class="flex w-full justify-between items-center p-2 md:hidden">
-    <a id="back-nav-mobile"><img alt="Navigate to the Previous Page" class="h-8" src="../img/back.png"/></a>
-    <a id="next-nav-mobile"><img alt="Navigate to the Next Page" class="h-8" src="../img/next.png"/></a>
-  </div>
-  <!-- Tablet nav -->
-  <div class="hidden md:flex lg:hidden w-full justify-between items-center p-2">
-    <a id="first-nav-tablet"><img alt="Navigate to the First Page" class="h-8" src="../img/first.png"/></a>
-    <a id="back-nav-tablet"><img alt="Navigate to the Previous Page" class="h-8" src="../img/back.png"/></a>
-    <a href="../chapters" id="index-nav-tablet"><img alt="Navigate to the Chapter Indexes" class="h-8"
+  <!-- Mobile-Tablet top nav -->
+  <div class="flex lg:hidden w-full justify-between items-center p-2">
+    <a id="back-nav"><img alt="Navigate to the Previous Page" class="h-8" src="../img/back.png"/></a>
+    <a class="hidden md:block" id="first-nav"><img alt="Navigate to the First Page" class="h-8" src="../img/first.png"/></a>
+    <a class="hidden md:block" href="../chapters" id="index-nav"><img alt="Navigate to the Chapter Indexes" class="h-8"
                                                      src="../img/index.png"/></a>
-    <a id="next-nav-tablet"><img alt="Navigate to the Next Page" class="h-8" src="../img/next.png"/></a>
-    <a id="latest-nav-tablet"><img alt="Navigate to the Latest Page" class="h-8" src="../img/latest.png"/></a>
+    <a class="hidden md:block" id="latest-nav"><img alt="Navigate to the Latest Page" class="h-8"
+                                                    src="../img/latest.png"/></a>
+    <a id="next-nav"><img alt="Navigate to the Next Page" class="h-8" src="../img/next.png"/></a>
   </div>
   <!-- Desktop sidebar nav -->
   <div class="hidden lg:flex flex-col w-auto justify-between p-2">
