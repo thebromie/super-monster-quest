@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="../css/tailwind-min.css" rel="stylesheet">
+    <title>Comic Viewer</title>
+</head>
+
+<body>
+<div class="flex flex-col lg:flex-row w-full">
+    <!-- Mobile-Tablet top nav -->
+    <div class="flex lg:hidden w-full justify-between items-center p-2 md:bg-none bg-[url(../img/titleImage.png)] bg-[length:55%_auto] bg-[center_12%] bg-no-repeat">
+        <a id="back-nav">
+            <img alt="Navigate to the Previous Page" class="h-8" src="../img/back.png"/>
+        </a>
+        <a class="hidden md:block" id="first-nav">
+            <img alt="Navigate to the First Page" class="h-8" src="../img/first.png"/>
+        </a>
+        <a class="hidden md:block" href="../chapters" id="index-nav">
+            <img alt="Navigate to the Chapter Indexes" class="h-8" src="../img/index.png"/>
+        </a>
+        <a class="hidden md:block" id="latest-nav">
+            <img alt="Navigate to the Latest Page" class="h-8" src="../img/latest.png"/>
+        </a>
+        <a id="next-nav">
+            <img alt="Navigate to the Next Page" class="h-8" src="../img/next.png"/>
+        </a>
+    </div>
+    <!-- Desktop sidebar nav -->
+    <div class="hidden lg:flex flex-col justify-between p-2 pt-0 flex-shrink-0 max-w-xs drop-shadow-xs">
+        <div class="flex flex-col gap-2">
+            <img class="w-full" src="../img/titleImage.png"/>
+            <div class="flex flex-row items-center justify-between">
+                <a id="back-nav-desktop"><img alt="Navigate to the Previous Page" class="h-8"
+                                              src="../img/back.png"/></a>
+                <a id="next-nav-desktop"><img alt="Navigate to the Next Page" class="h-8" src="../img/next.png"/></a>
+            </div>
+<!--            <div class="border-b-[1] border-accent/5 border"></div>-->
+            <div class="flex flex-row items-center justify-between gap-2">
+                <a id="first-nav-desktop"><img alt="Navigate to the First Page" class="h-8" src="../img/first.png"/></a>
+                <a href="../chapters" id="index-nav-desktop"><img alt="Navigate to the Chapter Indexes" class="h-8"
+                                                                  src="../img/index.png"/></a>
+                <a id="latest-nav-desktop"><img alt="Navigate to the Latest Page" class="h-8" src="../img/latest.png"/></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="relative w-full">
+        <img class="w-full h-auto drop-shadow-md"
+             id="comic-page-img"
+             src="https://www.supermonsterquest.com/pages/CH1_003.jpg"
+             alt="Comic page"
+        />
+    
+        <div class="absolute inset-0 grid grid-cols-5 w-full h-full">
+            <div class="cursor-pointer h-full bg-none transition-colors ease-in-out hover:bg-gradient-to-r hover:from-destructive/10 hover:to-destructive/0"></div>
+            <div class="h-full col-span-3"></div>
+            <div class="cursor-pointer h-full bg-none transition-colors ease-in-out hover:bg-gradient-to-l hover:from-secondary/10 hover:to-secondary/0"></div>
+        </div>
+    </div>
+    <!--    <img class="w-full h-auto drop-shadow-md" id="comic-page-img"-->
+    <!--         src="https://www.supermonsterquest.com/pages/CH1_003.jpg"/>-->
+
+    <!-- Mobile footer nav -->
+    <div class="flex md:hidden w-full justify-between p-2 items-center">
+        <a id="first-nav-mobile"><img alt="Navigate to the First Page" class="h-8" src="../img/first.png"/></a>
+        <a href="../chapters" id="index-nav-mobile"><img alt="Navigate to the Chapter Indexes" class="h-8"
+                                                         src="../img/index.png"/></a>
+        <a id="latest-nav-mobile"><img alt="Navigate to the Latest Page" class="h-8" src="../img/latest.png"/></a>
+    </div>
+</div>
+</body>
+</html>
